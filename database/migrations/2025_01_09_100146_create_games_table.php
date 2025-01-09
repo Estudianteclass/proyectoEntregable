@@ -19,7 +19,8 @@ return new class extends Migration
             $table->double('price');
             $table->string('developer');
             $table->integer('year');
-            $table->string('cover');
+            $table->string('cover')->nullable();
+            $table->softDeletes();
         });
     }
 

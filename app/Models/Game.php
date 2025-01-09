@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Game extends Model
 {
@@ -14,4 +15,7 @@ class Game extends Model
         'year',
         'cover',
     ];
+    public function comments():HasMany{
+        return $this->hasMany(Comment::class);
+    }
 }

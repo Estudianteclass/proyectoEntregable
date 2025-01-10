@@ -13,7 +13,9 @@ class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
-
+//poner roles de usuario
+//rol de admin, editar,borrar y crear juegos
+//rol de usuario normal puede crear juegos, crear,editar y borrar comentarios
     /**
      * The attributes that are mass assignable.
      *
@@ -48,6 +50,6 @@ class User extends Authenticatable
         ];
     }
     public function commentsUser():BelongsToMany{
-        return $this->belongsToMany(Game::class,'comments')->withPivot('rating','decription');
+        return $this->belongsToMany(Game::class,'comments')->withPivot('rating','description');
     }
 }

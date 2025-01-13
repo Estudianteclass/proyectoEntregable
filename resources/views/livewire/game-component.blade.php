@@ -1,9 +1,11 @@
 
     {{--Poner juegos en vista cuadricula--}}
     {{-- Because she competes with no one, no one can compete with her. --}}
+
 <div>
-   
+     <input type="button" value="Add new videogame" class="bg-green-700 px-2 py-2 rounded-md text-white font-bold"> 
  <div class="grid grid-cols-3 gap-4 justify-center">   
+ 
 @foreach ($games as $game)
     
 

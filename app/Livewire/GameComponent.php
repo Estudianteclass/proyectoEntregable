@@ -84,10 +84,13 @@ class GameComponent extends Component
 
         ]);
     }
-    public function deleteGame(Game $game)
+    public function deleteGame($gameId)
     {
-        $game->delete();
-        $this->getGames();
+        $game = Game::find($gameId);
+        if ($game) {
+            $game->delete();
+            $this->getGames();
+        }
     }
     public function createComment($game_id)
     {

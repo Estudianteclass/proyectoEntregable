@@ -18,7 +18,7 @@ class GameSeeder extends Seeder
             'title' => 'The Witcher 3',
             'genre' => 'rpg',
             'price' => '12.5',
-            'developer' => 'CD Projekt',
+            'developer' => 'CD Projekt Red',
             'year' => '2015',
             'cover' => 'photo_example',
 
@@ -27,7 +27,7 @@ class GameSeeder extends Seeder
             'title' => 'Death Space',
             'genre' => 'horror',
             'price' => '15.99',
-            'developer' => 'Visceral games',
+            'developer' => 'Motive Studio',
             'year' => '2011',
             'cover' => 'image',
 
@@ -74,6 +74,24 @@ class GameSeeder extends Seeder
             'price' => '60',
             'developer' => 'Rockstar Games',
             'year' => '2013',
+            'cover' => 'image',
+
+        ]);
+        DB::table('games')->insert([
+            'title' => 'Scarlet Nexus',
+            'genre' => 'rpg',
+            'price' => '46',
+            'developer' => 'Namco Bandai',
+            'year' => '2019',
+            'cover' => 'image',
+
+        ]);
+        DB::table('games')->insert([
+            'title' => 'Stellaris',
+            'genre' => 'strategy',
+            'price' => '60',
+            'developer' => 'Paradox Interactive',
+            'year' => '2018',
             'cover' => 'image',
 
         ]);

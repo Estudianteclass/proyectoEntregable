@@ -51,6 +51,11 @@ class GameComponent extends Component
     {
         $this->gameComments = Comment::where('game_id', '=', $gameId)->get();
     }
+
+    public function openModal()
+    {
+        $this->modal = true;
+    }
     public function closeModal()
     {
         $this->modal = false;
